@@ -2,7 +2,7 @@
     <table class="FormTable" style="width: 100%">
         <thead>
             <tr>
-                <td colspan="2">
+                <td colspan="3">
                     Installed Packages
                 </td>
             </tr>
@@ -14,6 +14,14 @@
                 </td>
                 <td>
                     {{ pkg.version }}
+                </td>
+                <td>
+                    <span class="row-buttons">
+                        <a class="button_gen button_gen_small" href="#">info</a>
+                        <a class="button_gen button_gen_small" href="#">dependencies</a>
+                        <a class="button_gen button_gen_small" href="#">uninstall</a>
+
+                    </span>
                 </td>
             </tr>
         </tbody>
@@ -46,4 +54,9 @@ export default defineComponent({
 });
 
 </script>
-<style scoped></style>
+<style scoped>
+.FormTable tr:hover td {
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #fc0;
+}
+</style>
